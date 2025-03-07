@@ -9,7 +9,7 @@ interface  IInputPasswordPros extends  ComponentProps<'input'> {}
 
 export default  function InputPassword({...rest} : IInputPasswordPros) {
 
-    const [typeToogle,setTypeToogle] = useState<'text' | 'password'>('text')
+    const [typeToogle,setTypeToogle] = useState<'text' | 'password'>('password')
 
     const onTypeToogle = () => {
         if (typeToogle === 'text') {
@@ -28,7 +28,7 @@ export default  function InputPassword({...rest} : IInputPasswordPros) {
             {...rest}
        />
         <div className={'absolute right-4 cursor-pointer'} >
-            <Icon icon={ typeToogle === 'text' ? 'clarity:eye-hide-solid' : 'clarity:eye-show-line'} color={'#7d8592'} className={'transition-all'} onClick={onTypeToogle} />
+            <Icon icon={ typeToogle === 'password' ? 'clarity:eye-hide-solid' : 'clarity:eye-show-line'} color={'#7d8592'} className={'transition-all'} onClick={onTypeToogle} />
         </div>
     </div>
 }
