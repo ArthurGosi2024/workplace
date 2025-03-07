@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import Logo from "@/app/assets/logo";
 
 interface IStagesActionsProps {
@@ -8,23 +5,13 @@ interface IStagesActionsProps {
 		id: number;
 		label: string;
 	}[];
+	currentStep: number;
 }
 
-export default function StageActions({ stages }: IStagesActionsProps) {
-	const [currentStep, setCurrentStep] = useState(1);
-
-	const handleNextStep = () => {
-		if (currentStep < stages.length) {
-			setCurrentStep(currentStep + 1);
-		}
-	};
-
-	const handlePrevStep = () => {
-		if (currentStep > 1) {
-			setCurrentStep(currentStep - 1);
-		}
-	};
-
+export default function StageActions({
+	stages,
+	currentStep = 1,
+}: IStagesActionsProps) {
 	return (
 		<div className="w-full h-full">
 			<div className="flex flex-col gap-10  h-full">
@@ -47,12 +34,16 @@ export default function StageActions({ stages }: IStagesActionsProps) {
 										)}
 									</div>
 									{index < stages.length - 1 && (
-										<div className="w-0.5 h-10 bg-white/30 mt-1" />
+										<div
+											className={`w-0.5 h-10 ${
+												step.id <= currentStep ? "bg-white " : "bg-white/30"
+											} mt-1`}
+										/>
 									)}
 								</div>
 								<div
 									className={`transition-opacity duration-300 ${
-										step.id === currentStep
+										step.id <= currentStep
 											? "opacity-100"
 											: step.id <= currentStep
 											? "opacity-70"
