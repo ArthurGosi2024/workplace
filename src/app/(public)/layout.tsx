@@ -27,7 +27,7 @@ export default function RootLayout({
 					<div className="bg-[#f4f9fd] antialiased  w-screen h-screen px-10 pt-5 pb-[30px]">
 						<div
 							className={`flex  w-full h-full ${
-								pathname === "/sign-up" ? "gap-8" : "gap-0"
+								pathname.includes("/sign-up") ? "gap-8" : "gap-0"
 							} transition-all  rounded-3xl overflow-hidden  `}
 						>
 							<DefaultIlustration pathname={pathname} />
