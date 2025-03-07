@@ -1,10 +1,9 @@
+import { IRouterStageActionsProps } from "@/app/(public)/sign-up/routerCOnfig";
 import Logo from "@/app/assets/logo";
 
+
 interface IStagesActionsProps {
-	stages: {
-		id: number;
-		label: string;
-	}[];
+	stages: IRouterStageActionsProps[]
 	currentStep: number;
 }
 

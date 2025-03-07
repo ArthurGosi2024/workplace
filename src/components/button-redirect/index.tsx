@@ -1,5 +1,3 @@
-"use client";
-
 import { Icon } from "@iconify/react";
 
 interface IButtonRedirectProps {
@@ -16,7 +14,7 @@ export default function ButtonRedirect({
 	icon,
 	reverse,
 	bgTransparent,
-	shandow =  true,
+	shandow = true,
 	action,
 }: IButtonRedirectProps) {
 	return (
