@@ -57,7 +57,7 @@ export default function SignIn() {
 						</span>
 					</button>
 					<Link
-						href={"/sign-up"}
+						href={"/sign-up/1"}
 						className="text-sm text-[#3f8cff] font-normal font-['Nunito Sans'] underline"
 					>
 						Não tem uma conta? Crie uma agora
