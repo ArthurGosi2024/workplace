@@ -6,11 +6,10 @@ import InputPassword from "@/components/input-password";
 import PhoneInput from "@/components/phone-input";
 export default function Page() {
 	return (
-		<div className="flex flex-col  gap-7 h-full">
+		<div className="flex flex-col  justify-center gap-7 h-full">
 			<div className=" text-center  text-[#0a1629] text-[22px] font-bold ">
 				Valid your phone
 			</div>
-
 			<form className="flex justify-center ">
 				<div className="w-fit">
 					<section className="flex flex-col justify-center w-[409px]  gap-5">
