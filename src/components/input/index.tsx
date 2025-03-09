@@ -7,6 +7,7 @@ interface IInputProps extends ComponentProps<"input"> {
 	typeInput: InputType;
 	label: string;
 	errors: string;
+
 }
 
 export default function Input({
@@ -22,7 +23,8 @@ export default function Input({
 			</div>
 			<input
 				{...rest}
-				className="w-[403px] h-12 bg-white rounded-[14px] outline-none  px-[18px]  shadow-[0px_1px_2px_0px_rgba(184,200,224,0.22)] border border-[#d8e0ef] text-[#7d8592] text-sm font-normal font-['Nunito Sans'] leading-normal"
+				
+				className="w-[403px] h-12 bg-white rounded-[14px] outline-none  px-[18px]  shadow-[0px_1px_2px_0px_rgba(184,200,224,0.22)] border border-[#d8e0ef] text-[#7d8592] text-sm font-normal font-['Nunito Sans'] leading-normal "
 			/>
 			<ErrorInput message={errors} />
 		</div>
