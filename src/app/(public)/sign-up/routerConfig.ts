@@ -7,7 +7,6 @@ export interface IRouterStageActionsProps {
 export const ROUTER_STAGES: IRouterStageActionsProps[] = [
 	{
 		id: 1,
-        router: 'sign-up',
 		label: "Valide seu telefone",
 	},
 	{
@@ -17,6 +16,7 @@ export const ROUTER_STAGES: IRouterStageActionsProps[] = [
 	},
 	{
 		id: 3,
+		router : 'tell-about-your-company',
 		label: "Fale sobre sua empresa",
 	},
 	{
